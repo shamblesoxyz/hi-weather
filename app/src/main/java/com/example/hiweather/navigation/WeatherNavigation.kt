@@ -23,5 +23,13 @@ fun WeatherNavigation() {
         composable(route = WeatherScreens.AboutScreen.name) {
             // TODO: AboutScreen(navController)
         }
+        composable(route = WeatherScreens.BlogScreen.name) {
+            BlogScreen(navController)
+        }
+        // Thêm BlogDetailScreen
+        composable(route = "BlogDetailScreen/{blogId}") { backStackEntry ->
+            val blogId = backStackEntry.arguments?.getString("blogId") ?: ""
+            BlogDetailScreen(navController = navController, blogId = blogId)
+        }
     }
 }

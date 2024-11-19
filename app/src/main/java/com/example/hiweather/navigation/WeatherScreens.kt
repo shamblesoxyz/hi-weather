@@ -4,5 +4,7 @@ enum class WeatherScreens {
     SplashScreen,
     MainScreen,
     SettingScreen,
-    AboutScreen
+    AboutScreen,
+    BlogScreen,
+    BlogDetailScreen
 }

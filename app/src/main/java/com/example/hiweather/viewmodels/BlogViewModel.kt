@@ -23,7 +23,7 @@ class BlogViewModel : ViewModel() {
     val selectedBlog: LiveData<Blog> get() = _selectedBlog
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http:// 172.16.31.156:5000/")
+        .baseUrl("http://192.168.143.1:5000/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

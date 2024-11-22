@@ -1,6 +1,7 @@
 package com.example.hiweather.navigation
 
 import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
@@ -17,6 +18,7 @@ import com.example.hiweather.viewmodels.PermissionViewModel
 import com.example.hiweather.viewmodels.SettingScreenViewModel
 import com.example.hiweather.screens.AboutScreen
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun WeatherNavigation() {
     val navController = rememberNavController()

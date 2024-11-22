@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hi Weather</string>
+    <string name="widget_description">Get real time and weather forecast with Hi Weather!</string>
 </resources>

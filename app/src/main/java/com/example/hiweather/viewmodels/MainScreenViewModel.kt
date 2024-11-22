@@ -98,4 +98,9 @@ class MainScreenViewModel @Inject constructor(
         }
     }
 
+    suspend fun getWeatherSync(latitude: Double, longitude: Double, unit: String): CurrentWeather? {
+        val result = repository.getCurrentWeather(latitude, longitude, unit)
+        return if (result.exception == null) result.data else null
+    }
+
 }

@@ -1,10 +1,8 @@
-package com.example.jetweatherapp.repository
+package com.example.hiweather.repository
 
-import com.example.jetweatherapp.data.DataOrException
-import com.example.jetweatherapp.model.LocationDataItem
-import com.example.jetweatherapp.network.GeocodingApi
-import com.example.jetweatherapp.utils.Constants
-import java.time.LocalDateTime
+import com.example.hiweather.data.DataOrException
+import com.example.hiweather.network.GeocodingApi
+import com.example.hiweather.model.LocationDataItem
 import javax.inject.Inject
 
 

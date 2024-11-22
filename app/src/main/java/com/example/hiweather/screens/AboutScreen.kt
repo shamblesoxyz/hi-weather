@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.screens
+package com.example.hiweather.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,7 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.jetweatherapp.components.TopBar
+import com.example.hiweather.components.TopBar
 
 @Composable
 fun AboutScreen(navController: NavController) {

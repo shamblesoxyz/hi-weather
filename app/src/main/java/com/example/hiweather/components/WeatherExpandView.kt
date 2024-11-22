@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.components
+package com.example.hiweather.components
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.animateDpAsState
@@ -39,7 +39,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetweatherapp.model.CurrentWeather
+import com.example.hiweather.model.CurrentWeather
 import kotlinx.coroutines.delay
 
 @Composable

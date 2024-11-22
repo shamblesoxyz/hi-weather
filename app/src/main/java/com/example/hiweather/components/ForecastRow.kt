@@ -1,5 +1,7 @@
-package com.example.jetweatherapp.components
+package com.example.hiweather.components
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,12 +21,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
-import com.example.jetweatherapp.model.WeatherDataItem
+import com.example.hiweather.model.WeatherDataItem
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 import java.time.format.TextStyle as TimeTextStyle
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun ForecastRow(forecast: WeatherDataItem) {
     val painter =
@@ -43,7 +46,7 @@ fun ForecastRow(forecast: WeatherDataItem) {
             Text(
                 modifier = Modifier
                     .weight(3.5f),
-                text = formatteDate(forecast.dt_txt?.split(" ")?.get(0)!!),
+                text = formatDate(forecast.dt_txt?.split(" ")?.get(0)!!),
                 style = TextStyle(fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
             )
             Image(
@@ -65,7 +68,8 @@ fun ForecastRow(forecast: WeatherDataItem) {
     }
 }
 
-fun formatteDate(dateString: String): String {
+@RequiresApi(Build.VERSION_CODES.O)
+fun formatDate(dateString: String): String {
     val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
     val date = LocalDate.parse(dateString, inputFormatter)
     val today = LocalDate.now()

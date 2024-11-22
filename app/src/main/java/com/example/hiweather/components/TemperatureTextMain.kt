@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.components
+package com.example.hiweather.components
 
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
@@ -12,7 +12,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.example.jetweatherapp.model.CurrentWeather
+import com.example.hiweather.model.CurrentWeather
 
 @Composable
 fun TemperatureTextMain(currentWeather: CurrentWeather) {

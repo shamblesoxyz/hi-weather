@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.components
+package com.example.hiweather.components
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.jetweatherapp.R
+import com.example.hiweather.R
 
 @Composable
 fun ResetButton(

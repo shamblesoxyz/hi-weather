@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.model
+package com.example.hiweather.model
 
 data class CurrentWeather(
     val base: String?,

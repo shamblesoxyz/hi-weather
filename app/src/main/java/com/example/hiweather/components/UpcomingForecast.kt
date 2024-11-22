@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.components
+package com.example.hiweather.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

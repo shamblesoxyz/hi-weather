@@ -1,9 +1,9 @@
-package com.example.jetweatherapp.repository
+package com.example.hiweather.repository
 
-import com.example.jetweatherapp.data.DataOrException
-import com.example.jetweatherapp.model.CurrentWeather
-import com.example.jetweatherapp.model.WeatherData
-import com.example.jetweatherapp.network.WeatherApi
+import com.example.hiweather.data.DataOrException
+import com.example.hiweather.model.WeatherData
+import com.example.hiweather.model.CurrentWeather
+import com.example.hiweather.network.WeatherApi
 import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(private val weatherApi: WeatherApi) {

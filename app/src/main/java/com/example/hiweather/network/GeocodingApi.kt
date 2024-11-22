@@ -1,5 +1,6 @@
 package com.example.hiweather.network
 
+import com.example.hiweather.model.LocationData
 import com.example.hiweather.utils.Constants
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -13,13 +14,11 @@ interface GeocodingApi {
         @Query("q") locationName: String,
         @Query("limit") limit: Int = 1,
         @Query("appid") apiKey: String = Constants.API_KEY
-    )
-    // TODO: LocationData
+    ): LocationData
 
     @GET("geo/1.0/zip")
     suspend fun getLocationByZipCode(
         @Query("zip") zipCode: String,
         @Query("appid") apiKey: String = Constants.API_KEY
-    )
-    // TODO: LocationData
+    ): LocationData
 }

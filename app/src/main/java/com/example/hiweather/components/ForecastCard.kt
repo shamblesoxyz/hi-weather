@@ -1,5 +1,7 @@
-package com.example.jetweatherapp.components
+package com.example.hiweather.components
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -15,9 +17,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.jetweatherapp.model.WeatherData
-import com.example.jetweatherapp.screens.getDistinctDateData
+import com.example.hiweather.model.WeatherData
+import com.example.hiweather.screens.getDistinctDateData
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun ForecastCard(forecastData: WeatherData) {
     Card(

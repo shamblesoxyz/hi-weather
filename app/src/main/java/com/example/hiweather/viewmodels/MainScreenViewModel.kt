@@ -1,14 +1,14 @@
-package com.example.jetweatherapp.viewmodels
+package com.example.hiweather.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.jetweatherapp.data.DataOrException
-import com.example.jetweatherapp.model.CurrentWeather
-import com.example.jetweatherapp.model.LocationDataItem
-import com.example.jetweatherapp.model.WeatherData
-import com.example.jetweatherapp.repository.GeocodingRepository
-import com.example.jetweatherapp.repository.WeatherRepository
+import com.example.hiweather.data.DataOrException
+import com.example.hiweather.model.CurrentWeather
+import com.example.hiweather.model.LocationDataItem
+import com.example.hiweather.model.WeatherData
+import com.example.hiweather.repository.GeocodingRepository
+import com.example.hiweather.repository.WeatherRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow

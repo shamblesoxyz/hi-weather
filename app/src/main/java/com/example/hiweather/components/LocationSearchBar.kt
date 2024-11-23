@@ -120,7 +120,7 @@ fun LocationSearchBar(
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Text(
-                                        text = "${item.name}, ${item.state} ${item.country}",
+                                    text = "${if(item.state != null) "${item.name}, ${item.state} ${item.country}" else "${item.name}, ${item.country}"}",
                                         style = TextStyle(
                                             fontSize = 18.sp,
                                             fontWeight = FontWeight.SemiBold

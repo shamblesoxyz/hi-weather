@@ -1,7 +1,7 @@
 <!-- res/xml/weather_widget_info.xml -->
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:initialLayout="@layout/widget_layout"
-    android:updatePeriodMillis="1800000"
+    android:updatePeriodMillis="60000"
     android:widgetCategory="home_screen"
     android:resizeMode="horizontal|vertical"
     android:minWidth="280dp"

@@ -1,5 +1,6 @@
 package com.example.hiweather.repository
 
+import android.util.Log
 import com.example.hiweather.data.DataOrException
 import com.example.hiweather.model.WeatherData
 import com.example.hiweather.model.CurrentWeather
@@ -13,6 +14,12 @@ class WeatherRepository @Inject constructor(private val weatherApi: WeatherApi) 
         try {
             weather.loading = true
             weather.data = weatherApi.getCurrentWeather(latitude,longitude,temperatureUnit)
+            println(latitude)
+            println(longitude)
+            println(temperatureUnit)
+            Log.d("-----------------------------------------------------------------------------------------------------------------------------------------------------weather", latitude.toString())
+            Log.d("weather", longitude.toString())
+            Log.d("weather", temperatureUnit)
         } catch (e: Exception) {
             weather.exception = e
         } finally {

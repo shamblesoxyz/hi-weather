@@ -6,9 +6,9 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface BlogApiService {
-    @GET("api/blog")
+    @GET("api/blogs")
     suspend fun getBlogs(): BlogResponse
 
-    @GET("api/blog/{id}")
+    @GET("api/blogs/{id}")
     suspend fun getBlogById(@Path("id") blogId: String): BlogByIdResponse
 }

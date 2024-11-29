@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.components
+package com.example.hiweather.components
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -23,7 +23,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.example.jetweatherapp.widgets.WormIndicator
+import com.example.hiweather.widgets.WormIndicator
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

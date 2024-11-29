@@ -3,7 +3,7 @@ package com.example.hiweather.di
 
 import com.example.hiweather.utils.Constants
 import com.example.hiweather.network.GeocodingApi
-import com.example.jetweatherapp.network.WeatherApi
+import com.example.hiweather.network.WeatherApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,8 +1,7 @@
-package com.example.jetweatherapp.network
+package com.example.hiweather.network
 
-import com.example.jetweatherapp.model.Blog
-import com.example.jetweatherapp.model.BlogByIdResponse
-import com.example.jetweatherapp.model.BlogResponse
+import com.example.hiweather.model.BlogByIdResponse
+import com.example.hiweather.model.BlogResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 

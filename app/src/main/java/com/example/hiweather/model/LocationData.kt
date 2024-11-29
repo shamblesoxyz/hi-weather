@@ -1,3 +1,3 @@
-package com.example.jetweatherapp.model
+package com.example.hiweather.model
 
 class LocationData : ArrayList<LocationDataItem>()

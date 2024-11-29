@@ -1,11 +1,13 @@
-package com.example.jetweatherapp.screens
+package com.example.hiweather.screens
 
 import android.Manifest
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.provider.Settings
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -55,25 +57,25 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.jetweatherapp.R
-import com.example.jetweatherapp.components.ForecastCard
-import com.example.jetweatherapp.components.HorizontalForecastListOf24Hours
-import com.example.jetweatherapp.components.LocationPermissionTextProvider
-import com.example.jetweatherapp.components.LocationSearchBar
-import com.example.jetweatherapp.components.PermissionDialog
-import com.example.jetweatherapp.components.ResetButton
-import com.example.jetweatherapp.components.TemperatureTextMain
-import com.example.jetweatherapp.components.WeatherDescription
-import com.example.jetweatherapp.components.WeatherExpandView
-import com.example.jetweatherapp.components.WeatherGrid
-import com.example.jetweatherapp.components.WeatherViewPager
-import com.example.jetweatherapp.model.CurrentWeather
-import com.example.jetweatherapp.model.WeatherData
-import com.example.jetweatherapp.model.WeatherDataItem
-import com.example.jetweatherapp.navigation.WeatherScreens
-import com.example.jetweatherapp.viewmodels.LocationViewModel
-import com.example.jetweatherapp.viewmodels.MainScreenViewModel
-import com.example.jetweatherapp.viewmodels.PermissionViewModel
+import com.example.hiweather.R
+import com.example.hiweather.components.ForecastCard
+import com.example.hiweather.components.HorizontalForecastListOf24Hours
+import com.example.hiweather.components.LocationPermissionTextProvider
+import com.example.hiweather.components.LocationSearchBar
+import com.example.hiweather.components.PermissionDialog
+import com.example.hiweather.components.ResetButton
+import com.example.hiweather.components.WeatherDescription
+import com.example.hiweather.components.WeatherExpandView
+import com.example.hiweather.components.WeatherGrid
+import com.example.hiweather.components.WeatherViewPager
+import com.example.hiweather.model.CurrentWeather
+import com.example.hiweather.model.WeatherData
+import com.example.hiweather.model.WeatherDataItem
+import com.example.hiweather.navigation.WeatherScreens
+import com.example.hiweather.viewmodels.LocationViewModel
+import com.example.hiweather.viewmodels.MainScreenViewModel
+import com.example.hiweather.viewmodels.PermissionViewModel
+import com.example.hiweather.components.TemperatureTextMain
 import kotlinx.coroutines.launch
 import java.time.Instant
 import java.time.LocalDate
@@ -81,6 +83,7 @@ import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun MainScreen(
     navController: NavController,
@@ -338,6 +341,7 @@ fun MainScreen(
     }
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun MainContent(currentWeather: CurrentWeather, forecastData: WeatherData) {
     TemperatureTextMain(currentWeather)

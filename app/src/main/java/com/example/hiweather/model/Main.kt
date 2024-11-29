@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.model
+package com.example.hiweather.model
 
 data class Main(
     val feels_like: Double?,

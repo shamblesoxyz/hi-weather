@@ -1,15 +1,13 @@
-package com.example.jetweatherapp.viewmodels
+package com.example.hiweather.viewmodels
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.jetweatherapp.model.Blog
-import com.example.jetweatherapp.network.BlogApiService
+import com.example.hiweather.model.Blog
+import com.example.hiweather.network.BlogApiService
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.toMutableStateList
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 

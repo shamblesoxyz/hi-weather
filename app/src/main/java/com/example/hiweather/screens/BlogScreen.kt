@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.screens
+package com.example.hiweather.screens
 
 import android.util.Log
 import androidx.compose.foundation.Image
@@ -11,7 +11,6 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -22,9 +21,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import coil.compose.rememberAsyncImagePainter
-import coil.compose.rememberImagePainter
-import com.example.jetweatherapp.navigation.WeatherScreens
-import com.example.jetweatherapp.viewmodels.BlogViewModel
+import com.example.hiweather.viewmodels.BlogViewModel
 
 @Composable
 fun BlogScreen(

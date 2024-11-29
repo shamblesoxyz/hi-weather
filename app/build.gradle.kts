@@ -56,108 +56,69 @@ android {
 }
 
 dependencies {
-    // Core KTX library for Android
     implementation(libs.androidx.core.ktx)
-
-    // Lifecycle runtime for Android
     implementation(libs.androidx.lifecycle.runtime.ktx)
-
-    // Jetpack Compose integration for activities
     implementation(libs.androidx.activity.compose)
-
-    // Bill of Materials for Jetpack Compose
     implementation(platform(libs.androidx.compose.bom))
-
-    // Core UI components for Jetpack Compose
     implementation(libs.androidx.ui)
-
-    // Graphics library for Jetpack Compose
     implementation(libs.androidx.ui.graphics)
-
-    // Tooling support for Jetpack Compose previews
     implementation(libs.androidx.ui.tooling.preview)
-
-    // Material Design 3 components for Jetpack Compose
     implementation(libs.androidx.material3)
-
-    // Navigation component for Jetpack Compose
     implementation(libs.androidx.navigation.compose)
-
-    // Google Play Services location APIs
     implementation(libs.play.services.location)
-
-    // JUnit testing framework
+    implementation(libs.androidx.runtime.livedata)
     testImplementation(libs.junit)
-
-    // AndroidX JUnit extensions
     androidTestImplementation(libs.androidx.junit)
-
-    // Espresso testing framework for Android
     androidTestImplementation(libs.androidx.espresso.core)
-
-    // Bill of Materials for Jetpack Compose (Android Test)
     androidTestImplementation(platform(libs.androidx.compose.bom))
-
-    // JUnit 4 integration for Jetpack Compose tests
     androidTestImplementation(libs.androidx.ui.test.junit4)
-
-    // Tooling support for Jetpack Compose (Debug)
     debugImplementation(libs.androidx.ui.tooling)
-
-    // Manifest support for Jetpack Compose tests (Debug)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // ConstraintLayout for Jetpack Compose
+    //Constraint Layout
     implementation(libs.androidx.constraintlayout.compose)
 
-    // Splash screen API for Android
+    // Splash Screen
     implementation(libs.androidx.core.splashscreen)
 
-    // Hilt dependency injection library
+    // Hilt and Dagger
     implementation(libs.hilt.android)
-
-    // Hilt compiler for Kotlin Symbol Processing (KSP)
     ksp(libs.hilt.compiler)
-
-    // Hilt navigation integration for Jetpack Compose
     implementation(libs.androidx.hilt.navigation.compose)
 
-    // Kotlin coroutines for Android
+    // Coroutines
     implementation(libs.kotlinx.coroutines.android)
 
-    // ViewModel library for Android
+    // Viewmodel
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
-
-    // ViewModel integration for Jetpack Compose
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-
-    // Lifecycle compiler for Kotlin Symbol Processing (KSP)
     ksp(libs.androidx.lifecycle.compiler)
 
-    // Retrofit library for network requests
-    implementation(libs.retrofit)
-
-    // Gson converter for Retrofit
+    // Retrofit
+    implementation (libs.retrofit)
     implementation(libs.converter.gson)
 
-    // Room database runtime library
+    //RoomDB
     implementation(libs.androidx.room.runtime)
-
-    // Room compiler for annotation processing
     annotationProcessor(libs.androidx.room.compiler)
-
-    // Room compiler for Kotlin Symbol Processing (KSP)
     ksp(libs.androidx.room.compiler)
-
-    // Room Kotlin extensions
     implementation(libs.androidx.room.ktx)
 
-    // Navigation runtime library for Android
+    //Navigation
     implementation(libs.androidx.navigation.runtime.ktx)
 
-    // Coil image loading library for Jetpack Compose
+    //Coil
     implementation(libs.coil.compose)
 
-    // Lottie animations for Jetpack Compose
+    //Lottie Animations
     implementation(libs.lottie.compose)
+
+    // Blog
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("io.coil-kt:coil-compose:2.1.0")
+
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
 }

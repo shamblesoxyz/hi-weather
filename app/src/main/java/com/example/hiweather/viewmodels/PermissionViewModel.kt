@@ -1,8 +1,9 @@
-package com.example.jetweatherapp.viewmodels
+package com.example.hiweather.viewmodels
 
 import android.Manifest
 import android.app.Activity
 import android.content.Context
+import androidx.annotation.RequiresApi
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,6 +17,7 @@ class PermissionViewModel @Inject constructor(@ApplicationContext private val co
     val visiblePermissionDialogQueue = mutableStateListOf<String>()
     val isLocationPermissionGranted = MutableStateFlow(false)
 
+    @RequiresApi(35)
     fun dismissDialog() {
         visiblePermissionDialogQueue.removeFirst()
     }

@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.components
+package com.example.hiweather.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -29,8 +29,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetweatherapp.data.DataOrException
-import com.example.jetweatherapp.model.LocationDataItem
+import com.example.hiweather.data.DataOrException
+import com.example.hiweather.model.LocationDataItem
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3Api::class)
 @Preview
@@ -120,7 +120,7 @@ fun LocationSearchBar(
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Text(
-                                        text = "${item.name}, ${item.state} ${item.country}",
+                                    text = "${if(item.state != null) "${item.name}, ${item.state} ${item.country}" else "${item.name}, ${item.country}"}",
                                         style = TextStyle(
                                             fontSize = 18.sp,
                                             fontWeight = FontWeight.SemiBold

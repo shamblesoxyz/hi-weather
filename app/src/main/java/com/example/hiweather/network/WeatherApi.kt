@@ -1,6 +1,8 @@
-package com.example.jetweatherapp.network
+package com.example.hiweather.network
 
+import com.example.hiweather.model.WeatherData
 import com.example.hiweather.utils.Constants
+import com.example.hiweather.model.CurrentWeather
 import retrofit2.http.GET
 import retrofit2.http.Query
 import javax.inject.Singleton
@@ -14,8 +16,7 @@ interface WeatherApi {
         @Query("lon") longitude: Double,
         @Query("units") units: String = "metric",
         @Query("appid") apiKey: String = Constants.API_KEY
-    )
-    // TODO: CurrentWeather
+    ): CurrentWeather
 
     @GET("data/2.5/forecast")
     suspend fun get5Day3HourWeatherForecast(
@@ -23,6 +24,5 @@ interface WeatherApi {
         @Query("lon") longitude: Double,
         @Query("units") units: String = "metric",
         @Query("appid") apiKey: String = Constants.API_KEY
-    )
-    // TODO: WeatherData
+    ): WeatherData
 }

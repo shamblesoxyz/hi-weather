@@ -1,4 +1,4 @@
-package com.example.jetweatherapp.screens
+package com.example.hiweather.screens
 
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -48,9 +48,9 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.jetweatherapp.components.TopBar
-import com.example.jetweatherapp.navigation.WeatherScreens
-import com.example.jetweatherapp.viewmodels.SettingScreenViewModel
+import com.example.hiweather.navigation.WeatherScreens
+import com.example.hiweather.components.TopBar
+import com.example.hiweather.viewmodels.SettingScreenViewModel
 import kotlinx.coroutines.launch
 
 @Composable

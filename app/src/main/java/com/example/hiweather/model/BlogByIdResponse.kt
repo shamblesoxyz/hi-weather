@@ -1,7 +1,10 @@
 package com.example.hiweather.model
 
 data class BlogByIdResponse(
-    val status: String,
-    val message: String,
-    val data: Blog // Blog là kiểu dữ liệu của bài viết duy nhất
+    val id: String,
+    val title: String,
+    val content: String,
+    val image: Image,
+    val createdAt: String,
+    val updatedAt: String
 )

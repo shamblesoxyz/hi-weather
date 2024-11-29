@@ -74,7 +74,8 @@ fun BlogDetailScreen(
             // Nếu đã có blog hoặc không có blog
             selectedBlog?.let { blog ->
                 // Hiển thị ảnh nếu có
-                blog.img?.let {
+                val imageUrl = "https://hi-weather-website.vercel.app/${blog.image.url}"
+                imageUrl?.let {
                     Image(
                         painter = rememberAsyncImagePainter(model = it),
                         contentDescription = "Blog Image",

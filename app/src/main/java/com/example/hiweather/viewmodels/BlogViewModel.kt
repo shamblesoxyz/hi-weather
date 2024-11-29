@@ -36,9 +36,8 @@ class BlogViewModel : ViewModel() {
     fun fetchBlogs() {
         viewModelScope.launch {
             try {
-                // Giả sử bạn gọi service.getBlogs() để lấy danh sách blogs
                 val blogResponse = service.getBlogs() // Lấy dữ liệu từ API
-                _blogs.value = blogResponse.data // Cập nhật danh sách blogs vào LiveData
+                _blogs.value = blogResponse.docs // Cập nhật danh sách blogs vào LiveData
             } catch (e: Exception) {
                 e.printStackTrace() // Xử lý lỗi nếu có
             }
@@ -49,15 +48,18 @@ class BlogViewModel : ViewModel() {
     fun fetchBlogById(blogId: String) {
         viewModelScope.launch {
             try {
-                val blogResponse = service.getBlogById(blogId) // Gọi API để lấy blog theo ID
-                if (blogResponse.status == "OK") {
-                    _selectedBlog.value = blogResponse.data // Cập nhật blog vào LiveData
-                    Log.d("Blog", "Fetched blog: ${blogResponse.data}")
-                } else {
-                    Log.e("Blog", "Failed to fetch blog: ${blogResponse.message}")
-                }
+                val blogResponse = service.getBlogById(blogId)
+                _selectedBlog.value = Blog(
+                    id = blogResponse.id,
+                    title = blogResponse.title,
+                    content = blogResponse.content,
+                    image = blogResponse.image,
+                    createdAt = blogResponse.createdAt,
+                    updatedAt = blogResponse.updatedAt
+                )
+                Log.d("Blog", "Fetched blog: ${blogResponse.title}")
             } catch (e: Exception) {
-                e.printStackTrace() // Xử lý lỗi nếu có
+                e.printStackTrace()
             }
         }
     }

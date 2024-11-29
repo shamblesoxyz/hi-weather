@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -56,19 +57,18 @@ fun BlogScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            items(count = blogs.value.size) { index ->
-                val blog = blogs.value[index]
-//                Log.d("BlogScreen", "Image URL: ${blog.img}").toString()
-                Log.d("BlogScreen", "Blog ID: ${blog._id}")
+            val blogList = blogs.value ?: emptyList()
+            items(count = blogList.size) { index ->
+                val blog = blogList[index]
+                Log.d("BlogScreen", "Blog ID: ${blog.id}")
                 BlogCard(
-                    imageRes = blog.img ?: "https://example.com/default-image.jpg",
+                    imageRes = "https://hi-weather-website.vercel.app/${blog.image.url}"
+                        ?: "https://example.com/default-image.jpg",
                     title = blog.title ?: "No Title",
                     content = blog.content ?: "No Content",
                     onClick = {
-//                        navController.navigate("BlogDetailScreen")
-                        navController.navigate("BlogDetailScreen/${blog._id}")
-//                        navController.navigate("${WeatherScreens.BlogDetailScreen.name}/${blog._id}")
-                        Log.d("BlogScreen", "Clicked Blog ID: ${blog._id}")
+                        navController.navigate("BlogDetailScreen/${blog.id}")
+                        Log.d("BlogScreen", "Clicked Blog ID: ${blog.id}")
                     }
                 )
             }
@@ -84,7 +84,7 @@ fun BlogCard(
     onClick: () -> Unit
 ) {
     val truncatedContent = content.split(" ").take(6).joinToString(" ") + if (content.split(" ").size > 6) "..." else ""
-    val truncatedTitle = content.split(" ").take(12).joinToString(" ") + if (content.split(" ").size > 12) "..." else ""
+    val truncatedTitle = title.split(" ").take(12).joinToString(" ") + if (content.split(" ").size > 12) "..." else ""
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -106,14 +106,16 @@ fun BlogCard(
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
-                text = truncatedTitle,
+                text = title,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                text = truncatedContent,
-                fontSize = 16.sp
+                text = content,
+                fontSize = 16.sp,
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis
             )
         }
     }

@@ -25,7 +25,7 @@ class BlogViewModel : ViewModel() {
     val selectedBlog: LiveData<Blog> get() = _selectedBlog
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://192.168.1.14:5000/")
+        .baseUrl("https://hi-weather-website.vercel.app/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
